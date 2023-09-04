@@ -1,0 +1,27 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<div class="card col-md-5">
+    <form method="post">
+        {% csrf_token %}
+        <div class="text-center my-2">
+            <h4>Sign in</h4>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="loginName">Email or username</label>
+            <input name="email" type="email" id="loginName" class="form-control" />
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input name="password" type="password" id="loginPassword" class="form-control" />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+    </form>
+</div>
+{% endblock content %}

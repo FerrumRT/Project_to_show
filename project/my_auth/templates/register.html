@@ -1,0 +1,45 @@
+{% extends 'template.html' %}
+
+{% block content %}
+<div class="card col-md-5">
+    <form method="post">
+        {% csrf_token %}
+        <div class="text-center my-3">
+        <h4>Registration</h4>
+        </div>
+
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+        <label class="form-label" for="registerName">Name</label>
+        <input name="name" type="text" id="registerName" class="form-control" />
+        </div>
+
+        <!-- Username input -->
+        <div class="form-outline mb-4">
+        <label class="form-label" for="registerUsername">Username</label>
+        <input name="username" type="text" id="registerUsername" class="form-control" />
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+        <label class="form-label" for="registerEmail">Email</label>
+        <input name="email" type="email" id="registerEmail" class="form-control" />
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+        <label class="form-label" for="registerPassword">Password</label>
+        <input name="password" type="password" id="registerPassword" class="form-control" />
+        </div>
+
+        <!-- Repeat Password input -->
+        <div class="form-outline mb-4">
+        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+        <input name="re_password" type="password" id="registerRepeatPassword" class="form-control" />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit disabled" class="btn btn-primary btn-block mb-3">Sign up</button>
+    </form>
+</div>
+{% endblock content %}
